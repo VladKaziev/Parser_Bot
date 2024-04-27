@@ -111,9 +111,6 @@ def read_whole_pdf(pdf_path, filename):
     encoded_file = encode_file(pdf_path).decode("utf-8")
     recognition = recognize_file(encoded_file)
     id = recognition['id']
-    print((id))
     result = get_recognition(id)
-    print(result)
     with open(f'{filename}', 'wb') as f:
         f.write(result)
-
